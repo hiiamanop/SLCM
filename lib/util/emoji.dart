@@ -12,19 +12,19 @@ class Emoji extends StatelessWidget {
         // Add your onPressed logic here
       },
       style: ElevatedButton.styleFrom(
-        primary: Colors.indigo.withOpacity(0.2), // Background color
-        onPrimary: Colors.white, // Text/icon color
+        foregroundColor: Colors.indigo, // Background color
+        textStyle: TextStyle(color: Colors.white), // Text color
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16), // Button border radius
+          borderRadius: BorderRadius.circular(5), // Button border radius
         ),
-        elevation: 0, // Button shadow
+        elevation: 10, // Button shadow
       ),
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal:6,vertical: 16),
+        padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
         child: Center(
           child: Text(
             emoji,
-            style: TextStyle(fontSize: 24),
+            style: TextStyle(fontSize: 20),
           ),
         ),
       ),
