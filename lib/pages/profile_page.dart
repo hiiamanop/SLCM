@@ -38,44 +38,52 @@ class _ProfilePageState extends State<ProfilePage> {
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(16.0),
-            child: FutureBuilder<UserProfile>(
-              future: _userProfileFuture,
-              builder: (context, snapshot) {
-                if (snapshot.connectionState == ConnectionState.waiting) {
-                  return Center(child: CircularProgressIndicator());
-                } else if (snapshot.hasError) {
-                  return Center(child: Text('Error: ${snapshot.error}'));
-                } else {
-                  final userProfile = snapshot.data!;
-                  return Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SizedBox(height: 20),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Profile",
-                            style: TextStyle(
-                              color: Colors.indigo,
-                              fontSize: 18,
-                              fontFamily: 'Poppins',
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  FutureBuilder<UserProfile>(
+                    future: _userProfileFuture,
+                    builder: (context, snapshot) {
+                      if (snapshot.connectionState == ConnectionState.waiting) {
+                        return CircularProgressIndicator(); // Return CircularProgressIndicator centered
+                      } else if (snapshot.hasError) {
+                        return Center(child: Text('Error: ${snapshot.error}'));
+                      } else {
+                        final userProfile = snapshot.data!;
+                        return Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(height: 20),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "Profile",
+                                  style: TextStyle(
+                                    color: Colors.indigo,
+                                    fontSize: 18,
+                                    fontFamily: 'Poppins',
+                                  ),
+                                ),
+                              ],
                             ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 20),
-                      _buildProfileHeader(userProfile),
-                      SizedBox(height: 40),
-                      _buildSection('Bio', userProfile.bio),
-                      SizedBox(height: 20),
-                      _buildSection('NIS', userProfile.nis),
-                      SizedBox(height: 20),
-                      _buildSection('Kode siswa', userProfile.kodeSiswa),
-                    ],
-                  );
-                }
-              },
+                            SizedBox(height: 20),
+                            _buildProfileHeader(userProfile),
+                            SizedBox(height: 40),
+                            _buildSection('Bio', userProfile.bio),
+                            SizedBox(height: 20),
+                            _buildSection('NIS', userProfile.nis),
+                            SizedBox(height: 20),
+                            _buildSection('Kode siswa', userProfile.kodeSiswa),
+                          ],
+                        );
+                      }
+                    },
+                  ),
+                ],
+              ),
             ),
           ),
         ),
@@ -88,7 +96,10 @@ class _ProfilePageState extends State<ProfilePage> {
             _showQRCodeDialog(context);
           },
           backgroundColor: Colors.indigo,
-          child: Icon(Icons.qr_code),
+          child: Icon(
+            Icons.qr_code,
+            color: Colors.white,
+          ),
         ),
       ),
     );

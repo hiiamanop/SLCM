@@ -157,8 +157,8 @@ class _CalendarPageState extends State<CalendarPage> {
                         decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.black.withOpacity(0.8),
-                              blurRadius: 5,
+                              color: Colors.grey.withOpacity(0.8),
+                              blurRadius: 10,
                             ),
                           ],
                           shape: BoxShape.circle,
@@ -214,8 +214,7 @@ class _CalendarPageState extends State<CalendarPage> {
                                             },
                                             child: Text('Tambahkan', style: TextStyle(fontFamily: 'Poppins'),),
                                             style: ElevatedButton.styleFrom(
-                                              primary: Colors
-                                                  .indigo, // Set button color here
+                                              foregroundColor: Colors.indigo // Set button color here
                                             ),
                                           )
                                         ],
@@ -226,7 +225,7 @@ class _CalendarPageState extends State<CalendarPage> {
                               },
                             );
                           },
-                          child: Icon(Icons.add),
+                          child: Icon(Icons.add, color: Colors.white,),
                         ),
                       ),
                     ),

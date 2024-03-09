@@ -18,43 +18,42 @@ class _ClassPageState extends State<ClassPage> {
             Column(
               children: [
                 Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 40),
-              child: Column(
-                children: [
-                  Column(
+                  padding: const EdgeInsets.symmetric(horizontal: 40),
+                  child: Column(
                     children: [
-                      SizedBox(
-                        height: 30,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                      Column(
                         children: [
-                          Text(
-                            "Daftar Kelas",
-                            style: TextStyle(
-                                color: Colors.indigo,
-                                fontSize: 18,
-                                fontFamily: 'Poppins'),
+                          SizedBox(
+                            height: 30,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Daftar Kelas",
+                                style: TextStyle(
+                                    color: Colors.indigo,
+                                    fontSize: 18,
+                                    fontFamily: 'Poppins'),
+                              )
+                            ],
+                          ),
+                          SizedBox(
+                            height: 20,
                           )
                         ],
                       ),
-                      SizedBox(
-                        height: 20,
-                      )
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      ElevatedButton(
+                      Column(
+                        children: [
+                         ElevatedButton(
                         onPressed: () {
                           // Add your onPressed logic here
                         },
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.grey[200], // Background color
-                          onPrimary: Colors.indigo[800], // Text color
+                          backgroundColor:  Colors.white,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(
-                                12), // Button border radius
+                                8), // Button border radius
                           ),
                           elevation: 10, // Button shadow
                         ),
@@ -103,16 +102,15 @@ class _ClassPageState extends State<ClassPage> {
                           ),
                         ),
                       ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      ElevatedButton(
+                          SizedBox(
+                            height: 20,
+                          ),
+                          ElevatedButton(
                         onPressed: () {
                           // Add your onPressed logic here
                         },
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.grey[200], // Background color
-                          onPrimary: Colors.indigo[800], // Text color
+                          backgroundColor: Colors.white,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(
                                 12), // Button border radius
@@ -164,16 +162,15 @@ class _ClassPageState extends State<ClassPage> {
                           ),
                         ),
                       ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      ElevatedButton(
+                          SizedBox(
+                            height: 20,
+                          ),
+                          ElevatedButton(
                         onPressed: () {
                           // Add your onPressed logic here
                         },
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.grey[200], // Background color
-                          onPrimary: Colors.indigo[800], // Text color
+                          backgroundColor: Colors.white,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(
                                 12), // Button border radius
@@ -225,16 +222,15 @@ class _ClassPageState extends State<ClassPage> {
                           ),
                         ),
                       ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      ElevatedButton(
+                          SizedBox(
+                            height: 20,
+                          ),
+                          ElevatedButton(
                         onPressed: () {
                           // Add your onPressed logic here
                         },
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.grey[200], // Background color
-                          onPrimary: Colors.indigo[800], // Text color
+                          backgroundColor: Colors.white,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(
                                 12), // Button border radius
@@ -286,27 +282,26 @@ class _ClassPageState extends State<ClassPage> {
                           ),
                         ),
                       ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Tambah kelas",
-                            style: TextStyle(
-                                color: Colors.indigo,
-                                fontFamily: 'Poppins',
-                                fontSize: 16),
-                          ),
                           SizedBox(
-                            width: 10,
+                            height: 20,
                           ),
-                          ElevatedButton(
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Tambah kelas",
+                                style: TextStyle(
+                                    color: Colors.indigo,
+                                    fontFamily: 'Poppins',
+                                    fontSize: 16),
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              ElevatedButton(
                               onPressed: () {},
                               style: ElevatedButton.styleFrom(
-                                primary: Colors.grey[200], // Background color
-                                onPrimary: Colors.indigo[800], // Text color
+                                backgroundColor: Colors.white,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(
                                       12), // Button border radius
@@ -316,16 +311,17 @@ class _ClassPageState extends State<ClassPage> {
                               child: Container(
                                 child: Row(
                                   children: [
-                                    Icon(Icons.playlist_add_outlined)
+                                    Icon(Icons.playlist_add_outlined, color: Colors.indigo,)
                                   ],
                                 ),
                               ))
+
+                            ],
+                          )
                         ],
                       )
                     ],
-                  )
-                ],
-              ),
+                  ),
                 ),
               ],
             )

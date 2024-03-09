@@ -61,8 +61,10 @@ class _ListKelasEbookState extends State<ListKelasEbook> {
                                       builder: (context) => ListBukuEbook()));
                             },
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.grey[200], // Background color
-                              onPrimary: Colors.indigo[800], // Text color
+                              foregroundColor:
+                                  Colors.grey[200], // Background color
+                              textStyle: TextStyle(
+                                  color: Colors.indigo[800]), // Text color
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(
                                     12), // Button border radius
@@ -115,10 +117,16 @@ class _ListKelasEbookState extends State<ListKelasEbook> {
                           ElevatedButton(
                             onPressed: () {
                               // Add your onPressed logic here
+                               Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => ListBukuEbook()));
                             },
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.grey[200], // Background color
-                              onPrimary: Colors.indigo[800], // Text color
+                              foregroundColor:
+                                  Colors.grey[200], // Background color
+                              textStyle: TextStyle(
+                                  color: Colors.indigo[800]), // Text color
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(
                                     12), // Button border radius
@@ -171,10 +179,16 @@ class _ListKelasEbookState extends State<ListKelasEbook> {
                           ElevatedButton(
                             onPressed: () {
                               // Add your onPressed logic here
+                               Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => ListBukuEbook()));
                             },
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.grey[200], // Background color
-                              onPrimary: Colors.indigo[800], // Text color
+                              foregroundColor:
+                                  Colors.grey[200], // Background color
+                              textStyle: TextStyle(
+                                  color: Colors.indigo[800]), // Text color
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(
                                     12), // Button border radius
@@ -227,10 +241,16 @@ class _ListKelasEbookState extends State<ListKelasEbook> {
                           ElevatedButton(
                             onPressed: () {
                               // Add your onPressed logic here
+                               Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => ListBukuEbook()));
                             },
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.grey[200], // Background color
-                              onPrimary: Colors.indigo[800], // Text color
+                              foregroundColor:
+                                  Colors.grey[200], // Background color
+                              textStyle: TextStyle(
+                                  color: Colors.indigo[800]), // Text color
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(
                                     12), // Button border radius

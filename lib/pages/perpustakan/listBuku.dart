@@ -1,5 +1,10 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:super_app/API/pdf_api.dart';
 import 'package:super_app/pages/perpustakan/buku.dart';
+import 'package:flutter_pdfview/flutter_pdfview.dart';
+import 'package:path/path.dart';
 
 class ListBukuEbook extends StatefulWidget {
   const ListBukuEbook({super.key});
@@ -53,16 +58,18 @@ class _ListBukuEbookState extends State<ListBukuEbook> {
                       Column(
                         children: [
                           ElevatedButton(
-                            onPressed: () {
+                            onPressed: () async {
                               // go to e-book
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Ebook()));
+                              final path =
+                                  'lib/assets/docs/Kelas10_matematika.pdf';
+                              final file = await PDFApi.loadAsset(path);
+                              openPDF(context, file);
                             },
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.grey[200], // Background color
-                              onPrimary: Colors.indigo[800], // Text color
+                              foregroundColor:
+                                  Colors.grey[200], // Background color
+                              textStyle: TextStyle(
+                                  color: Colors.indigo[800]), // Text color
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(
                                     12), // Button border radius
@@ -115,8 +122,10 @@ class _ListBukuEbookState extends State<ListBukuEbook> {
                               // Add your onPressed logic here
                             },
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.grey[200], // Background color
-                              onPrimary: Colors.indigo[800], // Text color
+                              foregroundColor:
+                                  Colors.grey[200], // Background color
+                              textStyle: TextStyle(
+                                  color: Colors.indigo[800]), // Text color
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(
                                     12), // Button border radius
@@ -169,8 +178,10 @@ class _ListBukuEbookState extends State<ListBukuEbook> {
                               // Add your onPressed logic here
                             },
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.grey[200], // Background color
-                              onPrimary: Colors.indigo[800], // Text color
+                              foregroundColor:
+                                  Colors.grey[200], // Background color
+                              textStyle: TextStyle(
+                                  color: Colors.indigo[800]), // Text color
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(
                                     12), // Button border radius
@@ -223,8 +234,10 @@ class _ListBukuEbookState extends State<ListBukuEbook> {
                               // Add your onPressed logic here
                             },
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.grey[200], // Background color
-                              onPrimary: Colors.indigo[800], // Text color
+                              foregroundColor:
+                                  Colors.grey[200], // Background color
+                              textStyle: TextStyle(
+                                  color: Colors.indigo[800]), // Text color
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(
                                     12), // Button border radius
@@ -283,3 +296,7 @@ class _ListBukuEbookState extends State<ListBukuEbook> {
         )));
   }
 }
+
+void openPDF(BuildContext context, File file) => Navigator.of(context).push(
+      MaterialPageRoute(builder: (context) => Ebook(file: file)),
+    );

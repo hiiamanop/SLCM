@@ -19,7 +19,7 @@ class _NotePageState extends State<NotePage> {
             boxShadow: [
               BoxShadow(
                 color: Colors.black.withOpacity(0),
-                blurRadius:0,
+                blurRadius: 0,
               )
             ],
             color: Colors.grey[200],
@@ -70,8 +70,7 @@ class _NotePageState extends State<NotePage> {
                             ElevatedButton(
                                 onPressed: () {},
                                 style: ElevatedButton.styleFrom(
-                                  primary: Colors.grey[200], // Background color
-                                  onPrimary: Colors.indigo[800], // Text color
+                                  backgroundColor: Colors.white,
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(
                                         12), // Button border radius
@@ -80,7 +79,7 @@ class _NotePageState extends State<NotePage> {
                                 ),
                                 child: Container(
                                   child: Row(
-                                    children: [Icon(Icons.edit)],
+                                    children: [Icon(Icons.edit, color: Colors.indigo,)],
                                   ),
                                 ))
                           ],
