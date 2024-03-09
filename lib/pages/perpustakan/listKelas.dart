@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:super_app/pages/perpustakan/listBuku.dart';
+import 'package:super_app/pages/perpustakan/listBuku10.dart';
+import 'package:super_app/pages/perpustakan/listBuku11.dart';
+import 'package:super_app/pages/perpustakan/listBuku12.dart';
+import 'package:super_app/pages/perpustakan/listBukuLainnya.dart';
 
 class ListKelasEbook extends StatefulWidget {
   const ListKelasEbook({super.key});
@@ -58,7 +61,7 @@ class _ListKelasEbookState extends State<ListKelasEbook> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => ListBukuEbook()));
+                                      builder: (context) => ListBukuEbook10()));
                             },
                             style: ElevatedButton.styleFrom(
                               foregroundColor:
@@ -120,7 +123,7 @@ class _ListKelasEbookState extends State<ListKelasEbook> {
                                Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => ListBukuEbook()));
+                                      builder: (context) => ListBukuEbook11()));
                             },
                             style: ElevatedButton.styleFrom(
                               foregroundColor:
@@ -182,7 +185,7 @@ class _ListKelasEbookState extends State<ListKelasEbook> {
                                Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => ListBukuEbook()));
+                                      builder: (context) => ListBukuEbook12()));
                             },
                             style: ElevatedButton.styleFrom(
                               foregroundColor:
@@ -244,7 +247,7 @@ class _ListKelasEbookState extends State<ListKelasEbook> {
                                Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => ListBukuEbook()));
+                                      builder: (context) => ListBukuEbookLainnya()));
                             },
                             style: ElevatedButton.styleFrom(
                               foregroundColor:

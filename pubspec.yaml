@@ -43,9 +43,11 @@ dependencies:
   path_provider: ^2.1.2
   http: ^1.1.1
   carousel_slider: ^4.2.1
-  fl_chart: ^0.66.2
   file_picker: ^6.1.1
   path: ^1.9.0
+  fl_chart: ^0.66.2
+
+
 
 dev_dependencies:
   flutter_test:

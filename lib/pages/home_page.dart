@@ -333,7 +333,7 @@ class _HomePageState extends State<HomePage> {
                                     FlSpot(20, 93),
                                   ],
                                 ),
-                              ],
+                              ], 
                               titlesData: FlTitlesData(
                                   topTitles: AxisTitles(
                                       axisNameWidget: Text('Peforma/Bulan')))),
